@@ -11,7 +11,7 @@ const increaseValue = () => {
 }
 increaseValue()
 
-function decreaseValue() {
+const decreaseValue = () => {
     let anotherP = document.getElementsByClassName("counter");
     previousCount = anotherP[0].textContent;
     previousCount = parseInt(previousCount);
@@ -28,24 +28,25 @@ const cakeSizeAndFlavourPrice = () => {
     let cakeSizePrice = document.getElementById("cake-size").value;
     let cakeFlavourPrice = document.getElementById("cake-flavour").value
     let price = 0
+    let nairaSign = "\u20A6"
     if (cakeSizePrice == "10 inches" && cakeFlavourPrice == "chocolate") {
-        price = 200.00
+        price = nairaSign + 200.00
     } else if (cakeSizePrice == "10 inches" && cakeFlavourPrice == "vanilla") {
-        price = 10.00
+        price = nairaSign + 10.00
     } else if (cakeSizePrice == "10 inches" && cakeFlavourPrice == "red velvet") {
-        price = 12.00
+        price = nairaSign + 12.00
     } else if (cakeSizePrice == "12 inches" && cakeFlavourPrice == "chocolate") {
-        price = 14.00
+        price = nairaSign + 14.00
     } else if (cakeSizePrice == "12 inches" && cakeFlavourPrice == "vanilla") {
-        price = 16.00
+        price = nairaSign + 16.00
     } else if (cakeSizePrice == "12 inches" && cakeFlavourPrice == "red velvet") {
-        price = 18.00
+        price = nairaSign + 18.00
     } else if (cakeSizePrice == "14 inches" && cakeFlavourPrice == "chocolate") {
-        price = 22.00
+        price = nairaSign + 22.00
     } else if (cakeSizePrice == "14 inches" && cakeFlavourPrice == "vanilla") {
-        price = 24.00
+        price = nairaSign + 24.00
     } else if (cakeSizePrice == "14 inches" && cakeFlavourPrice == "red velvet") {
-        price = 26.00
+        price = nairaSign + 26.00
     }
 
     document.getElementById("mytextareaForPrice").innerHTML = price;
@@ -57,45 +58,31 @@ const cakeSizeAndFlavourPrice = () => {
 }
 cakeSizeAndFlavourPrice()
 
-const viewCart = () => {
-    let x = document.getElementById("view_cart");
-    x.innerHTML = "Hello World";
-    console.log(x)
-
-
-    document.getElementById("view_cart").innerHTML = "Hello beauty";
-    // var x = document.getElementById("myTextarea");
-    // document.getElementById("view_cart").innerHTML = x;
-}
-viewCart();
-
-const viewDropDownOption = () => {
-    // let e = document.getElementById("cake-flavour").value;
-    // let strUser = e.options[e.selectedIndex].text;
-    // document.getElementById("view_drop_option").innerHTML = strUser;
-    // console.log(e)
-    // console.log(strUser)
-    // var e = document.getElementById("cake-flavour");
-    // var value = e.options[e.selectedIndex].value;
-    // var text = e.options[e.selectedIndex].text;
-    // document.getElementById("view_drop_option").innerHTML = text;
-    let e = document.getElementById("cake-flavour").selectedIndex;
-    let strUser = e.options[e.selectedIndex].text;
-    document.getElementById("view_drop_option").innerHTML = strUser;
-    console.log(e)
-    console.log(strUser)
-}
-viewDropDownOption()
-
-function getOption() {
+function viewOrderMade() {
     //getting what the user has selected by using localstorage
     let localStorageOfCakeSize = localStorage.getItem("cakesize");
-    console.log(localStorageOfCakeSize)
     let localStorageOfCakeFlavour = localStorage.getItem("cakeFlavour");
-
-    document.querySelector('.output').textContent = localStorageOfCakeSize;
-    console.log(localStorageOfCakeSize)
-    
-    
+    document.querySelector('.cake_types').textContent = localStorageOfCakeSize + " &" + localStorageOfCakeFlavour;
 }
-getOption()
+
+viewOrderMade()
+
+function settingCakeMessageToLocalStorage() {
+    let getcakeMessageValue = document.getElementById("cake_message").value
+    localStorage.setItem("cakeMess", getcakeMessageValue);
+
+    let getcakeIcingValue = document.getElementById("cake_Icing").value
+    localStorage.setItem("cakeIcing", getcakeIcingValue);
+
+}
+settingCakeMessageToLocalStorage()
+
+function gettingTheCakeMessageFromLocalStorage() {
+    let localStorageOfCakeMessage = localStorage.getItem("cakeMess");
+    document.querySelector('.cake_message_from_storage').textContent = localStorageOfCakeMessage
+
+    let localStorageOfCakeIcing = localStorage.getItem("cakeIcing");
+    document.querySelector('.icing_color_from_storage').textContent = localStorageOfCakeIcing
+    console.log(localStorageOfCakeIcing)
+}
+gettingTheCakeMessageFromLocalStorage()

@@ -1,17 +1,28 @@
 <!DOCTYPE html>
 
 <head>
-    
+
 </head>
 
 <body>
     <h1>view Cart (smiley)</h1>
     <p> The value of the option selected is:
-        <span class="output"></span>
+        <span class="cake_types"></span>
     </p>
-    <button onclick="getOption()"> Check option </button>
+    <p> The cake message is:
+        <span class="cake_message_from_storage"></span>
+    </p>
+    <p> The icing Color is:
+        <span class="icing_color_from_storage"></span>
+    </p>
+    <button onclick="gettingTheCakeMessageFromLocalStorage()">cake Message & Color</button>
+    <button onclick="viewOrderMade()"> Check option </button>
+    <!-- <button onclick="viewOrderMade()"> Icing Color chosen </button> -->
 
-
+    <button>
+        <a href="checkout.html">PROCEED TO CHECKOUT</a>
+    </button>
+    
     <script src="patience.js"></script>
 </body>
 

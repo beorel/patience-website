@@ -5,51 +5,55 @@
 </head>
 
 <body>
-    <div id="image">
-        <img src='https://upload.wikimedia.org/wikipedia/commons/0/04/Pound_layer_cake.jpg'></img>
+    <div class="row">
+        <div id="image" class="column">
+            <img src='https://upload.wikimedia.org/wikipedia/commons/0/04/Pound_layer_cake.jpg'></img>
+        </div>
+        <div id="first_page_of_selection" class="column">
+            <p class="caketype">ROUND BUTTERCREAM CAKE</p>
+            <p class="cake_Range_price"><b>&#8358;10,000 - &#8358;50,000</b></p>
+            <form action="/action_page.php">
+                <label for="cake" style="margin-right:50px">cake size:</label>
+                <select name="cake-size" id="cake-size" onchange="cakeSizeAndFlavourPrice()">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="10 inches">10 inches</option>
+                    <option value="12 inches">12 Inches</option>
+                    <option value="14 inches">14 inches</option>
+                </select>
+                <p id="demo"></p>
+                <br><br>
+                <label for="cake" style="margin-right:50px">cake flavour:</label>
+                <select name="cake-flavour" id="cake-flavour" onchange="cakeSizeAndFlavourPrice()">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="vanilla">vanilla</option>
+                    <option value="chocolate">chocolate</option>
+                    <option value="red velvet">red velvet</option>
+                </select><br><br>
+                <textarea id="mytextareaForPrice"></textarea>
+                <br><br>
+                <label for="cake">Cake Message</label><br>
+                <input id="cake_message" type="text" placeholder="Note: 3-4 words max." value="" required><br>
+                <label for="cake">What message would you like on the cake?</label><br><br>
+
+
+                <label for="cake">Icing Colour </label><br>
+                <input type="text" placeholder="" id="cake_Icing" required><br>
+                <label for="cake">Colour white comes at an extra charge</label><br><br>
+                <div class="btn-group">
+                    <button class="decrease" onclick="decreaseValue();">-</button>
+                    <button class="counter">1</button>
+                    <button class="increase" onclick="increaseValue();">+</button>
+                </div>
+                <button type="submit" onclick="viewOrderMade()">ADD TO CART</button>
+
+                <button id="button" onclick="settingCakeMessageToLocalStorage()">
+                    <a href="cart.html">view-cart------</a>
+                </button>
+                <br><br>
+
+        </div>
     </div>
-    <div id="first_page_of_selection">
-        <p>ROUND BUTTERCREAM CAKE</p>
-        <p>#10,000 - #50,000</p>
-        <form action="/action_page.php">
-            <label for="cars">cake size:</label>
-            <select name="cake-size" id="cake-size" onchange="cakeSizeAndFlavourPrice()">
-                <option value="" disabled selected>Select your option</option>
-                <option value="10 inches">10 inches</option>
-                <option value="12 inches">12 Inches</option>
-                <option value="14 inches">14 inches</option>
-            </select>
-            <p id="demo"></p>
-            <br><br>
-            <label for="cars">cake flavour:</label>
-            <select name="cake-flavour" id="cake-flavour" onchange="cakeSizeAndFlavourPrice()">
-                <option value="" disabled selected>Select your option</option>
-                <option value="vanilla">vanilla</option>
-                <option value="chocolate">chocolate</option>
-                <option value="red velvet">red velvet</option>
-            </select>
-            <textarea id="mytextareaForPrice"></textarea>
-            <br><br>
-            <label for="cake">Cake Message</label><br>
-            <input type="text" placeholder="Note: 3-4 words max." required><br>
-            <label for="cake">What message would you like on the cake?</label><br><br>
 
-            <label for="cake">Icing Colour </label><br>
-            <input type="text" placeholder="" required><br>
-            <label for="cake">Colour white comes at an extra charge</label><br><br>
-            <div class="btn-group">
-                <button class="decrease" onclick="decreaseValue();">-</button>
-                <button class="counter">1</button>
-                <button class="increase" onclick="increaseValue();">+</button>
-            </div>
-            <button type="submit">ADD TO CART</button>
-
-            <button id="button">
-                <a href="cart.html">view-cart------</a>
-            </button>
-            <br><br>
-
-    </div>
     <script src="patience.js"></script>
 </body>
 

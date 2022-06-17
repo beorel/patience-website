@@ -1,0 +1,43 @@
+.column {
+    background-color: rgba(165, 241, 244, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    text-align: center;
+    margin: 20px;
+
+}
+.buttercream_cake{
+        background-color: rgba(246, 224, 22, 0.8);
+        /* border: 1px solid rgba(0, 0, 0, 0.8); */
+        font-size: 20px;
+        text-align: center;
+        margin: 20px;
+}
+img {
+    width: 300px;
+    padding: 5px;
+    height: 300px;
+    background-size: cover;
+
+}
+
+section div div a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    grid-gap: 50px 100px;
+}
+
+span {
+    /* background-color: blueviolet; */
+    color: burlywood;
+    padding: 0;
+    margin: 0;
+}
+

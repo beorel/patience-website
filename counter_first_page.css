@@ -1,24 +1,56 @@
-.btn-group button {
-    background-color: #04AA6D; /* Green background */
-    border: 1px solid green; /* Green border */
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
-  }
-  
-  /* Clear floats (clearfix hack) */
-  .btn-group:after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  
-  .btn-group button:not(:last-child) {
-    border-right: none; /* Prevent double borders */
-  }
-  
-  /* Add a background color on hover */
-  .btn-group button:hover {
-    background-color: #3e8e41;
-  }
+img {
+  width: 500px;
+  padding: 5px;
+  height: 500px;
+  background-size: cover;
+
+}
+
+.column {
+  background-color: rgba(252, 252, 252, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+  grid-gap: 10px 5px;
+}
+.caketype{
+  /* background-color: rgba(196, 41, 41, 0.8); */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgb(117, 5, 5);
+}
+#first_page_of_selection{
+  text-align: left;
+}
+.cake_Range_price{
+  color: red !important
+}
+
+#cake-size {
+  width: 20em;
+  height: 4em;
+  overflow: hidden;
+  border-radius: .25em;
+}
+#cake-flavour {
+  width: 20em;
+  height: 4em;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: .25em;
+}
+
+select {
+  width: 50%;
+  height: 50%;
+  margin: 0;
+  padding: 0 0 0 1em;
+  color: rgb(204, 77, 77);
+  cursor: pointer;
+}

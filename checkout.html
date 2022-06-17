@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+
+<body>
+    <h1>Billing Details</h1>
+    <form>
+        <label>Customer First Name * </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <label>Customer Last Name* </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <label>Customer Email Address * </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <label>Customer Phone Number* </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <h1>ADDITIONAL INFORMATION</h1>
+        <h4>Delivery Options</h4>
+        <label for="Delivery"><input id="Delivery" type="radio" name="add_info" value="Delivery"
+                checked> Delivery</label><br>
+        <!-- <label for="Pickup"><input id="Pickup" type="radio" name="add_info" value="Pickup"> Pickup</label><br> -->
+
+        <label>Recipient Name  * </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <label>Recipient Phone Number* </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <label>CDelivery Address  * </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <label>Nearest Landmark or B/Stop* </label><br>
+        <input type="text" placeholder="" value="" required><br><br>
+
+        <label for="Delivery Date">Delivery Date:</label>
+        <input type="date" id="Delivery Date" name="Delivery Date">
+        <!-- <input type="submit"> -->
+
+        <label for="Delivery Time">Delivery Time</label>
+            <select name="Delivery Time" id="cake-flavour" onchange="cakeSizeAndFlavourPrice()">
+                <!-- <option value="" disabled selected>Select your option</option> -->
+                <option value="Morning">Morning [11AM - 1PM]</option>
+                <option value="Afternoon">Afternoon [1PM - 3PM]</option>
+                <option value="Evening">Evening [3PM - 5PM]</option>
+            </select>
+    </form>
+
+    <script src="patience.js"></script>
+</body>
+
+</html>
